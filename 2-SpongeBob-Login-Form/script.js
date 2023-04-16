@@ -79,10 +79,10 @@ const passInputFocus = () => {
     }
 
     leftEye.style.top = leftEyeTop + "px";
-    leftEye.style.left = leftEyeLeft = "px";
+    leftEye.style.left = leftEyeLeft + "px";
 
-    rightEye.style.top = rightEyeTop = "px";
-    rightEye.style.left = rightEyeLeft = "px";
+    rightEye.style.top = rightEyeTop + "px";
+    rightEye.style.left = rightEyeLeft + "px";
 
     leftEyeTop--;
     leftEyeLeft++;
