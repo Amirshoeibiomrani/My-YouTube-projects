@@ -17,12 +17,50 @@ let rightEyePaddingTop = 0;
 
 const userInputFocus = () => {
   console.log("userInputFocus");
+  let eyePosition = setInterval(() => {
+    if (leftEyePaddingTop === 10) {
+      clearInterval(eyePosition);
+    }
+    leftEye.style.paddingTop = leftEyePaddingTop + "px";
+    leftEye.style.left = leftEyeLeft + "px";
+
+    rightEye.style.paddingTop = rightEyePaddingTop + "px";
+    rightEye.style.left = rightEyeLeft + "px";
+  }, 10);
 };
 const userInputBlur = () => {
   console.log("userInputBlur");
+  let eyePosition = setInterval(() => {
+    if (leftEyePaddingTop === 0) {
+      clearInterval(eyePosition);
+    }
+    leftEye.style.paddingTop = leftEyePaddingTop + "px";
+    leftEye.style.left = leftEyeLeft + "px";
+
+    rightEye.style.paddingTop = rightEyePaddingTop + "px";
+    rightEye.style.left = rightEyeLeft + "px";
+
+    leftEyePaddingTop--;
+    leftEyeLeft++;
+
+    rightEyePaddingTop--;
+    rightEyeLeft++;
+  }, 10);
 };
-const userKeyHandler = () => {
+const userKeyHandler = (event) => {
   console.log("userKeyHandler");
+  if (leftEyePaddingLeft > 20) {
+    return false;
+  }
+  if (event.keyCode === 8) {
+    leftEyePaddingLeft--;
+    rightEyePaddingLeft--;
+  } else {
+    leftEyePaddingLeft++;
+    rightEyePaddingLeft++;
+  }
+  leftEye.style.paddingLeft = leftEyePaddingLeft + "px";
+  rightEye.style.paddingLeft = rightEyePaddingLeft + "px";
 };
 const passInputFocus = () => {
   console.log("passInputFocus");
