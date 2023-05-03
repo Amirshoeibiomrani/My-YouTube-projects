@@ -5,6 +5,7 @@ padding: 0;
 box-sizing: border-box;
 font-family: 'poppins' ,sans-serif;
 scroll-behavior: smooth;
+
 }
 .navigation {
     position: fixed;
@@ -16,9 +17,11 @@ scroll-behavior: smooth;
     transition: 0.5s;
     z-index: 100000;
     overflow: hidden;
+
 }
 .navigation.active {
     height: 350px;
+
 }
 .navigation .toggle {
     position: relative;
@@ -34,10 +37,12 @@ scroll-behavior: smooth;
     padding: 0 20px;
     font-size: 20px;
     cursor: pointer;
+
 }
 .navigation .toggle:before {
     content: 'Menu';
     margin-right: 10px;
+
 }
 .navigation .toggle.active:before {
     content: 'close';
@@ -59,6 +64,7 @@ scroll-behavior: smooth;
     height: 2px;
     background: #A5BECF;
     transition: 0.5s;
+
 }
 .navigation .toggle span::after {
     content: '';
@@ -69,14 +75,17 @@ scroll-behavior: smooth;
     height: 2px;
     background: #A5BECF;
     transition: 0.5s;
+
 }
 .navigation .toggle.active span::before{
     transform: rotate(225deg);
     top: 24px;
+
 }
 .navigation .toggle.active span::after{
     transform: rotate(135deg);
     bottom: 24px;
+
 }
 .navigation ul {
     position: relative;
@@ -97,6 +106,7 @@ scroll-behavior: smooth;
 .navigation ul li a:hover {
     transition: 0s;
     background: #668BC4;
+
 }
 section {
     position: relative;
@@ -111,4 +121,5 @@ section {
 section h2 {
     font-size: 12vw;
     color: #A5BECF;
+    
 }
