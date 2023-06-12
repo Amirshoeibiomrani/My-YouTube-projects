@@ -1,12 +1,12 @@
 body{
-    background: ghostwhite;
-    color: dimgray;
+    background: linear-gradient(45deg, #094839, #3fb730);
+    color: #000;
     font-family: serif;
     text-align: center;
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 4rem;
 }
 
 #container{
@@ -17,7 +17,7 @@ h1{
 
 .box{
     display: inline-block;
-    border: 1px solid gray;
+    border: 1px solid #e1d013;
     width: 100px;
     height: 100px;
     text-align: center;
@@ -57,12 +57,12 @@ span{
     height: 75px;
     width: 125px;
     display: inline-block;
-    background: ghostwhite;
+    background: #dbf4ff;
     position: relative;
     z-index: 10;
     margin-top: -50%;
     border-radius: 20px;
-    box-shadow: 0 0 75px 2px dimgray;
+    box-shadow: 0 0 75px 2px #000;
     animation: larger 0.5s;
     animation-fill-mode: forwards;
     box-sizing: content-box;
@@ -72,7 +72,7 @@ span{
 }
 
 button{
-    background: dimgray;
+    background: #d41010;
     border-radius: 2px;
     color: ghostwhite;
     border: none;
@@ -80,11 +80,11 @@ button{
 }
 
 button:focus{
-    background: silver;
+    background: #15b62d;
 }
 
 .activeBox{
-    background: silver;
+    background: #cebb11;
 }
 
 @keyframes larger{
@@ -97,5 +97,4 @@ button:focus{
         height: 100px;
         width: 250px;
     }
-
 }
