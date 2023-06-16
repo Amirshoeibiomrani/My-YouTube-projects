@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap')
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+/* Defining default dark mode color variables */
+:root {
+--text-color: #ffffff;
+--icon-color: #acacbe;
+--icon-hover-bg: #5b5e71;
+--placeholder-color: #cccccc;
+--outgoing-chat-bg: #343541;
+--incoming-chat-bg: #444654;
+--outgoing-chat-border:#343541;
+--incoming-chat-border: #444654;
+}
+body {
+    background: var(--outgoing-chat-bg);
+}
+/* Chat container styling */
+.chat-container .chat {
+    padding: 25px 10px;
+    display: center;
+    justify-content: center;
+    color: var(--text-color)
+}
+.chat-container .chat.outgoing {
+    background: var(--outgoing-chat-bg);
+    border: 1px solid var(--outgoing-chat-border);
+}
+.chat-container .chat.incoming {
+    background: var(--incoming-chat-bg);
+    border: 1px solid var(--incoming-chat-border);
+}
+.chat .chat-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.chat .chat-details {
+display: flex;
+align-items: center;
+}
+.chat .chat-details img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+.chat .chat-details p {
+    white-space: pre-wrap;
+    font-size: 1.05rem;
+    padding: 0 50px 0 25px;
+}
+span.material-symbols-rounded {
+    user-select: none;
+    cursor: pointer;
+}
+.chat .chat-content span {
+    font-size: 1.3rem;
+    color: var(--icon-color);
+    visibility: hidden;
+}
+.chat:hover .chat-content span {
+    visibility: visible;
+}
+.typing-animation .typing-dot {
+    height: 7px;
+    width: 7px;
+    opacity: 0.7;
+    margin: 0 3px;
+    border-radius: 50%;
+    background: var(--text-color);
+    animation: animateDots 1.5s var(--delay) ease-in-out infinite;
+}
+.typing-animation{
+    display: inline-flex;
+    padding-left: 25px;
+}
+@keyframes animateDots {
+    0%, 44% {
+        transform: translateY(0px);
+    }
+    22% {
+        opacity: 0.4;
+        transform: translateY(-6px);
+
+    }
+    44% {
+        opacity: 0.2;
+    }
+
+}
+/*Typing container*/
+.typing-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--outgoing-chat-bg);
+    border: 1px solid var(--incoming-chat-border);
+}
+.typing-container .typing-content {
+    max-width: 950px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
