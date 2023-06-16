@@ -20,11 +20,18 @@ function initialize() {
         // Attach The Marker
         map: map,
         // Tooltip On Hover
-        
-    })
+        title:'UNITED STATES, FLORIDA'
+    });
 
+    // Adjust Map Center When The Window Is Resized
+    google.maps.event.addDOMlistner(window, "resize", function() {
+      map.setCenter(mapOptions.center);
+});
 
 
 
 
 }
+
+// Initialize The Map When Window Loading Finished
+google.maps.event.addDOMlistner(window. "load", initialize);
