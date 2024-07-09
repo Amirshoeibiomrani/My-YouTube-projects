@@ -1,0 +1,23 @@
+/* display: grid;
+ grid-Template-columns: repeat(auto-fit, minmax(20rem, 1fr)) */
+
+
+ #gameboard{
+    width: 320px;
+    height: 320px;
+    background-color: blank;
+ }
+
+ .square{
+    height: 40px;
+    width: 40px;
+ }
+
+ .beige{
+    background-color: rgb(110,110,98);
+
+ }
+
+ .brown{
+    background-color: rgb(169,43,43);
+ }
